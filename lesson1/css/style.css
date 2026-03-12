@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #b6eaff;
+  /* border: 2px solid #333; */
+}
+
+button {
+  margin-top: 25px;
+  padding: 0 15px 0 15px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: #fff;
+  text-align: center;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+}
+
+/* Применяется ко всем li, кроме первой */
+.menu__list li + li {
+  padding-left: 50px;
+}
+
+.width__info,
+.height__info {
+  font-size: 20px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.login {
+  margin-right: 44px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.menu__list a {
+  opacity: 0.5;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.menu__list a:hover {
+  opacity: 1;
+}
+
+.sigh-up {
+  text-transform: uppercase;
+  color: #250f8a;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 8px 43px;
+  border-radius: 20px;
+}
+
+/* СЛЕД  */
+
+.video__chapter-play {
+  width: 500px;
+  height: 431px;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.operation__field {
+  padding-top: 50px;
+  min-height: 850px;
+  flex-direction: column;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+}
+.info__lesson {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.video__chapter-play {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  padding: 15px 0 15px 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.counter__input {
+  flex: 0 0 30px;
+  width: 100%;
+}
+
+.open__txt-file {
+  margin-top: 35px;
+  width: 130px;
+  user-select: none;
+  padding: 25px 0 25px 0;
+  font-size: 25px;
+  font-weight: 600;
+}
+.counter {
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос */
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  /* user-select: none; */
+}
+
+.counter__button {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1 1 auto; /* Изначально в ряд (приблизительно 1/5) */
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.counter__button_minus-edge,
+.counter__button_plus-edge {
+  flex-grow: 1;
+  background-color: lightcoral;
+}
+.counter__button_minus,
+.rand__button,
+.counter__button_plus {
+  flex-grow: 1.5;
+  background-color: lightgreen;
+}
+
+.counter__button_plus-edge,
+.counter__button_minus-edge {
+  width: 80px;
+}
+
+.counter__input input {
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.counter__button_rand {
+  width: 165px;
+}
+
+.button__play {
+  margin-top: 35px;
+  width: 610px;
+  height: 40px;
+}
+
+.info__file {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25px;
+}
+.info__file p:first-child {
+  margin-right: 50px;
+}
+.info__lesson p:first-child {
+  margin-right: 20px;
+}
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Медиа-запрос для диапазона 428px - 635px */
+@media (max-width: 645px) {
+  .container {
+    max-width: auto;
+    max-height: auto;
+    margin-top: auto;
+    background-color: #c095f1;
+  }
+  .operation__field {
+    padding-top: 5px;
+  }
+  .video__chapter-play {
+    width: auto; /* Любая фиксированная ширина */
+    height: auto; /* Любая фиксированная высота */
+  }
+
+  h1 {
+    margin-bottom: 5px;
+  }
+  .video-container {
+    margin-top: 5px;
+  }
+  .open__txt-file {
+    margin-top: 15px;
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+    /* Перенастройка ширины для мобильных */
+    margin-top: 10px;
+  }
+  .counter__button_minus,
+  .rand__button,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    max-width: 195px;
+  }
+  .counter__button_minus-edge {
+    margin-right: 200px;
+  }
+
+  .counter__button_minus,
+  .counter__button_plus {
+    width: 100px;
+  }
+
+  .counter__button_rand {
+    max-width: 205px;
+  }
+  .button__play {
+    margin-top: 30px;
+    width: 450px;
+  }
+  .info__file {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 495px) {
+  .container {
+    background-color: #f1c695;
+  }
+
+  .counter__button_rand {
+    max-width: 155px;
+  }
+}
+
+@media (max-width: 485px) {
+  .container {
+    background-color: #95f1bb;
+  }
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    max-width: 150px;
+  }
+
+  .counter__button_minus-edge {
+    margin-right: 165px;
+  }
+  .counter__button_rand {
+    max-width: 145px;
+  }
+}
+
+@media (max-width: 475px) {
+  .operation__field {
+    padding-top: 5px;
+  }
+  .video__chapter-play {
+    width: auto; /* Любая фиксированная ширина */
+    height: auto; /* Любая фиксированная высота */
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+    /* Перенастройка ширины для мобильных */
+    margin-top: 10px;
+  }
+  .counter__button_minus,
+  .rand__button,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  .counter__button_minus-edge {
+    margin-right: 160px;
+  }
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    max-width: 130px;
+  }
+  .counter__button_minus,
+  .counter__button_plus {
+    width: 120px;
+  }
+
+  .counter__button_rand {
+    max-width: 135px;
+  }
+  .button__play {
+    margin-top: 30px;
+    width: 430px;
+  }
+}
+
+@media (max-width: 455px) {
+  .operation__field {
+    padding-top: 5px;
+  }
+  .video__chapter-play {
+    width: auto; /* Любая фиксированная ширина */
+    height: auto; /* Любая фиксированная высота */
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+    /* Перенастройка ширины для мобильных */
+    margin-top: 10px;
+  }
+  .counter__button_minus,
+  .rand__button,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  .counter__button_minus-edge {
+    margin-right: 170px;
+  }
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    max-width: 120px;
+  }
+  .counter__button_minus,
+  .counter__button_plus {
+    width: 110px;
+  }
+
+  .counter__button_rand {
+    max-width: 135px;
+  }
+  .button__play {
+    margin-top: 30px;
+    width: 405px;
+  }
+}
+
+@media (max-width: 435px) {
+  .operation__field {
+    padding-top: 5px;
+  }
+  .video__chapter-play {
+    width: auto; /* Любая фиксированная ширина */
+    height: auto; /* Любая фиксированная высота */
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+    /* Перенастройка ширины для мобильных */
+    margin-top: 10px;
+  }
+  .counter__button_minus,
+  .rand__button,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  .counter__button_minus-edge {
+    margin-right: 165px;
+  }
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    max-width: 120px;
+  }
+  .counter__button_minus,
+  .counter__button_plus {
+    width: 100px;
+  }
+
+  .counter__button_rand {
+    max-width: 135px;
+  }
+  .button__play {
+    margin-top: 30px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 495px) {
+  .container {
+    background-color: #f1c695;
+  }
+
+  .counter__button_rand {
+    max-width: 155px;
+  }
+}
+
+@media (max-width: 485px) {
+  .container {
+    background-color: #f1c695;
+  }
+
+  .counter__button_rand {
+    max-width: 145px;
+  }
+}
+
+@media (max-width: 428px) {
+  html,
+  body {
+    /* Занимает 100% высоты окна браузера */
+    height: 100vh;
+    /* Улучшенный вариант для мобильных (учитывает панели браузера) */
+    height: 100dvh;
+
+    /* Убирает внешние и внутренние отступы по умолчанию */
+    margin: 0;
+    padding: 0;
+
+    /* Запрещает прокрутку, если контент не помещается */
+    overflow: hidden;
+  }
+  .container {
+    max-width: 428px;
+    max-height: auto;
+    margin-top: auto;
+    background-color: #a0f195;
+  }
+  .operation__field {
+    padding-top: 5px;
+  }
+  .video__chapter-play {
+    width: 380px; /* Любая фиксированная ширина */
+    height: 290px; /* Любая фиксированная высота */
+  }
+
+  h1 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .video-container {
+    margin-top: 5px;
+  }
+  .open__txt-file {
+    margin-top: 5px;
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+    /* Перенастройка ширины для мобильных */
+    margin-top: 10px;
+    max-width: 115px; /* Элементы 1 и 5 под 2 и 4 */
+  }
+  .counter__button_minus,
+  .rand__button,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  .counter__button_minus-edge {
+    margin-right: auto;
+  }
+
+  .counter__button_minus,
+  .counter__button_plus {
+    max-width: 115px; /* Элементы 1 и 5 под 2 и 4 */
+  }
+
+  .counter__button_rand {
+    max-width: 125px;
+  }
+
+  .button__play {
+    margin-top: 30px;
+    width: 380px;
+  }
+}
